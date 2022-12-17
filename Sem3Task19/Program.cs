@@ -30,15 +30,15 @@ int ReadData(string mesage)
         return int.Parse(Console.ReadLine()??"0");
 }
 //Метод вывода данных
-void PrintData(int num, string msg)
+void PrintData(int number, string msg)
 {
-    Console.WriteLine(num + msg);
+    Console.WriteLine(number+ msg);
 }
 bool PalinTest(int number)   
 {
 
     bool result = false;
-    if ((number/1000)*100 + (number%100))
+    if (number/10000==number%10&&(number/1000)%10==(number/10)%10);
     {
     result = true;
     } 
