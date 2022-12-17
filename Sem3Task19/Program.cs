@@ -38,9 +38,6 @@ bool PalinTest(int number)
 {
 
     bool result = false;
-    if (number/10000==number%10&&(number/1000)%10==(number/10)%10);
-    {
-    result = true;
-    } 
+    result = (number/10000==number%10&&(number/1000)%10==(number/10)%10);
     return result;
 }
