@@ -1,40 +1,41 @@
-﻿//Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-//3, 5 -> 243 (35) 2, 4 -> 16
+﻿ // Задача 25
+// Напишите цикл, который принимает на вход два числа (A и B) 
+//      и возводит число A в натуральную степень B.
+//------------------------------------------------------------
 
-//Ввод данных
-int numberA = ReadData("Введите число: ");
-int numberB = ReadData("Введите степень: ");
-Pow(numberA, numberB);
-
-//запрос данных у пользователя
+// Чтение данных из консоли
 int ReadData(string line)
 {
-    //выводим сообщение
-    Console.Write(line);
-    //считываем число
-    int numberP = int.Parse(Console.ReadLine() ?? "0");
-    return numberP; //возвращаем значение
+    //Выводим сообщение
+    Console.WriteLine(line);
+    //Считываем число
+    int number = int.Parse(Console.ReadLine() ?? "0");
+    // Возвращаме значение
+    return number;
 }
 
-// Метод вывода результата
-void PrintResult(string line)
+// Возведение в степень
+long Pow(int A, int B)
 {
-   Console.WriteLine(line);
-}
-// Функция возведения в степень
-int Pow (int numberA, int numberB)
-{
-    int result = 1;
-    for (int i = 1; i <= numberA; i++)
+    long res = 1;
+    for (int i = 0; i < B; i++)
     {
-    result = result * numberB;
+        res = res * A;
     }
-    return result;
-
+    return res;
 }
 
+// Метод вывода результата 
+void PrintData(long line)
+{
+    Console.WriteLine(line);
+}
 
-PrintResult(",");
+int numberA = ReadData("Введите число А ");
+int numberB = ReadData("Введите число B ");
+long res = Pow(numberA, numberB);
+PrintData(res);
+
 
 
  	
